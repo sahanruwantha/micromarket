@@ -1,0 +1,40 @@
+services:
+  postgres:
+    container_name: micromarket-postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: sahan
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/micromarket-postgres
+    volumes:
+      - postgres:/data/micromarket-postgres
+    ports:
+      - "5431:5432"
+    networks:
+      - micromarket
+    restart: unless-stopped
+
+  pgadmin:
+    container_name: micromarket-pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - pgadmin:/var/lib/micromarket-pgadmin
+    ports:
+      - "5051:80"
+    networks:
+      - micromarket
+    restart: unless-stopped
+
+networks:
+  micromarket:
+    driver: bridge
+  spring:
+    driver: bridge
+
+volumes:
+  postgres:
+  pgadmin:
