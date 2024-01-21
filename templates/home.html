@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micromarket - Battery Shop</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            color: #ecf0f1;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        section {
+            text-align: center;
+            padding: 2em;
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6em;
+            color: #555;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            text-decoration: none;
+            color: #ecf0f1;
+            background: linear-gradient(to right, #e74c3c, #c0392b);
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(to right, #c0392b, #a93226);
+        }
+
+        footer {
+            background: linear-gradient(to right, #2c3e50, #34495e);
+            color: #ecf0f1;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Modern CSS and Animations */
+
+        body {
+            transition: background-color 0.5s ease;
+        }
+
+        header, section, footer {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        body.loaded {
+            background-color: #fff;
+        }
+
+        body.loaded header, body.loaded section, body.loaded footer {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .cta-button {
+            cursor: pointer;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Placeholder Image Styling */
+
+        .product-image {
+            width: 100%;
+            max-width: 400px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-image:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Micromarket Battery Shop</h1>
+    </header>
+
+    <section>
+        <p>Welcome to Micromarket, your one-stop destination for high-quality batteries!</p>
+        <p>Explore our wide range of batteries to power up your devices.</p>
+        <a href="#contact" class="cta-button">Contact Us</a>
+        <img src="placeholder-image.jpg" alt="Battery Products" class="product-image">
+    </section>
+
+    <footer id="contact">
+        <p>Contact us at info@micromarket.com | Phone: +123 456 7890</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>
