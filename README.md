@@ -11,7 +11,7 @@ micromarket
 # Get Started
 To setup the micromarket
  project, here is the following guidelines:
-* Clone the repository <code>git clone https://github.com/thisishaykins/micromarket
+* Clone the repository <code>git clone https://github.com/sahanruwanthasilva/micromarket
 .git</code>
 * Open Project folder on terminal 
 * Prepare your virtual environment <code>python3 -m venv venv</code> 
